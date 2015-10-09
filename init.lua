@@ -193,6 +193,8 @@ local function match_client(c, startup)
     return module.focus_client(c,props)
 end
 
+module.match_client = match_client
+
 capi.client.connect_signal("manage", match_client)
 
 capi.client.connect_signal("untagged", function (c, t)
